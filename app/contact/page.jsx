@@ -1,12 +1,16 @@
+/** @format */
+
 import EmailIcon from "@mui/icons-material/Email";
-import PhoneIcon from "@mui/icons-material/Phone";
 import FacebookIcon from "@mui/icons-material/Facebook";
+import PhoneIcon from "@mui/icons-material/Phone";
 import Contractform from "./contractform";
+import Joinus from "./pages/join";
+import Map from "./pages/map";
 
 const Contact = () => {
   return (
     <>
-      <div className="relative shadow-inner shadow-[#dff07e] w-[90%] m-auto mt-10 min-h-[50vh] rounded-t-xl px-20 bg-[#f4f8dc] flex justify-center ">
+      <div className="relative shadow-inner shadow-[#dff07e] w-[90%] m-auto mt-10 min-h-[50vh] rounded-t-xl px-20 bg-[#f7fbf2] flex justify-center ">
         <div className="absolute top-0 h-1/3 lg:h-1/2 w-[95%] md:w-[90%] m-auto bg-[radial-gradient(#cde4a4_2px,transparent_2px)] [background-size:20px_20px] opacity-40"></div>
         <div className="flex flex-col w-full text-center items-center">
           <div className="jd:my-[50px] mt-10">logo</div>
@@ -34,25 +38,16 @@ const Contact = () => {
           </div>
         </div>
       </div>
-      <div className="flex justify-center items-center w-full  ">
-        <div className="w-[90%] flex justify-center items-center gap-5 ">
-          <div className="w-1/2">
+
+      <div className="w-full flex justify-center items-center ">
+        <div className="lg:w-[90%] sm:p-10 bg-[#eef1e6] sm:m-10 m-5 rounded-xl flex-col sm:flex-row  flex justify-center items-center gap-5 ">
+          <div className="2xl:w-1/2 ">
             <Contractform />
           </div>
-          <div className="text-center w-1/2 text-lg mb-6 p-2  text-gray-700">
-            <div className="w-full max-w-4xl mx-auto p-5 rounded-lg overflow-hidden shadow-lg">
-              <iframe
-                title="Google Maps Location"
-                className="w-full h-64 md:h-96 "
-                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3650.306117646653!2d90.42332927420474!3d23.80767228619067!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3755c7f9e292b5e7%3A0xf512d0b2c643e9d9!2sPrimeasia%20University!5e0!3m2!1sen!2sbd!4v1691121888888!5m2!1sen!2sbd"
-                allowFullScreen=""
-                loading="lazy"
-                referrerPolicy="no-referrer-when-downgrade"
-              ></iframe>
-            </div>
-          </div>
+          <Map />
         </div>
       </div>
+      <Joinus />
     </>
   );
 };

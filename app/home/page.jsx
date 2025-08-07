@@ -1,5 +1,5 @@
-import ArrowDownwardIcon from '@mui/icons-material/ArrowDownward';
-
+/** @format */
+import Speech from "./speech";
 const Home = () => {
   return (
     <div>
@@ -27,8 +27,10 @@ const Home = () => {
               Join Us
             </button>
           </div>
-         
         </div>
+      </div>
+      <div>
+        <Speech />
       </div>
     </div>
   );

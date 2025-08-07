@@ -1,7 +1,9 @@
+/** @format */
+
 "use client";
-import Link from "next/link";
-import MenuIcon from "@mui/icons-material/Menu";
 import CloseIcon from "@mui/icons-material/Close";
+import MenuIcon from "@mui/icons-material/Menu";
+import Link from "next/link";
 import { useState } from "react";
 
 const Navbar = () => {
@@ -44,12 +46,7 @@ const Navbar = () => {
               >
                 Event
               </Link>
-              <Link
-                href="/blog"
-                className="focus:text-[#cbea75] active:text-[#cbea75] hover:scale-125 duration-200 hover:text-[#cbea75] "
-              >
-                Blog
-              </Link>
+
               <button className="px-4 py-1 text-xl bg-[#cbea75] text-black hover:scale-110 hover:shadow-gray-400 hover:shadow-lg transition duration-200 rounded-lg">
                 Subscrbe
               </button>
@@ -95,12 +92,7 @@ const Navbar = () => {
                 >
                   Event
                 </Link>
-                <Link
-                  href="/blog"
-                  className="focus:text-[#cbea75] focus:border focus:px-16 focus:rounded-md active:text-[#cbea75] hover:scale-125 duration-200 hover:text-[#cbea75] "
-                >
-                  Blog
-                </Link>
+
                 <button className="px-4 py-1 text-xl bg-[#cbea75] text-black hover:scale-110 hover:shadow-gray-400 hover:shadow-lg transition duration-200 rounded-lg">
                   Subscrbe
                 </button>

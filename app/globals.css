@@ -1,8 +1,21 @@
+/** @format */
+
 @import "tailwindcss";
 
-html, body{
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    font-family: 'Times New Roman', Times, serif;
+html,
+body {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Times New Roman", Times, serif;
+}
+
+@theme {
+  --breakpoint-xs: 40rem;
+
+  --breakpoint-md: 850px;
+  --breakpoint-lg: 64rem;
+  --breakpoint-xl: 80rem;
+  --breakpoint-2xl: 96rem;
+  --breakpoint-3xl: 115rem;
 }

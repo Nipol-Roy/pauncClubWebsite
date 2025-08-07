@@ -1,21 +1,23 @@
+/** @format */
+
 "use client";
 
-import EmailIcon from "@mui/icons-material/Email";
-import PhoneIcon from "@mui/icons-material/Phone";
-import FacebookIcon from "@mui/icons-material/Facebook";
 import ArrowUpwardIcon from "@mui/icons-material/ArrowUpward";
+import EmailIcon from "@mui/icons-material/Email";
+import FacebookIcon from "@mui/icons-material/Facebook";
+import PhoneIcon from "@mui/icons-material/Phone";
 import Link from "next/link";
 
 const Footer = () => {
   return (
     <>
       <div className="w-full bg-[rgb(26,49,41)] text-lg text-white  md:p-10 relative flex flex-col justify-center items-center ">
-        <div className="md:flex justify-between  items-center w-full  lg:w-[95%] py-3 px-2 sm:text-lg ">
+        <div className="md:flex justify-between  items-center w-full  lg:w-[95%] py-3 px-2 sm:text-lg text-sm">
           <div className=" m-2 flex gap-3  justify-start my-10 items-center">
             Logo <div>Paunc</div>
           </div>
 
-          <div className="flex justify-center sm:px-5 md:px-0  items-center gap-[18px]  sm:gap-5  lg:gap-9">
+          <div className="flex justify-center sm:px-5 md:px-0  items-center gap-[15px]  sm:gap-5  lg:gap-9">
             <Link
               href="/"
               className="focus:text-[#cbea75] active:text-[#cbea75] hover:scale-125 duration-200 hover:text-[#cbea75] "
@@ -42,10 +44,10 @@ const Footer = () => {
               Event
             </Link>
             <Link
-              href="blog"
+              href="/members"
               className="focus:text-[#cbea75] active:text-[#cbea75] hover:scale-125 duration-200 hover:text-[#cbea75] "
             >
-              Blog
+              Member
             </Link>
           </div>
           <div className="md:relative absolute mx-3 text-center right-0 top-10  sm:right-8 md:top-0 md:right-0">
@@ -76,8 +78,17 @@ const Footer = () => {
             </div>
           </div>
           <div className="md:text-lg flex justify-center items-center  text-sm py-3 px-4">
-           <div> © 2023 Nutritionist. All rights reserved. Powerd By Anulesh{" "}
-            <Link href=" " className=" cursor-pointer p-3 hover:text-[#cbea75] capitalize"> dev: Nipol</Link></div>
+            <div>
+              {" "}
+              © 2023 Nutritionist. All rights reserved. Powerd By Anulesh{" "}
+              <Link
+                href=" "
+                className=" cursor-pointer p-3 hover:text-[#cbea75] capitalize"
+              >
+                {" "}
+                dev: Nipol
+              </Link>
+            </div>
           </div>
         </div>
       </div>
