@@ -1,13 +1,13 @@
 /** @format */
 "use client";
 import Image from "next/image";
-import celiandcol from "../../../public/assete/images/aboutImage/Celebrating Health and Nutrition Together.PNG";
-import comunity from "../../../public/assete/images/aboutImage/Community Support Across Seasons.PNG";
-import futur from "../../../public/assete/images/aboutImage/Global Collaboration in Health and Nutrition.PNG";
+import celiandcol from "../../../public/assete/images/aboutImage/Celebrating Health and Nutrition Together.png";
+import comunity from "../../../public/assete/images/aboutImage/Community Support Across Seasons.png";
+import futur from "../../../public/assete/images/aboutImage/Global Collaboration in Health and Nutrition.png";
 import imageOne from "../../../public/assete/images/aboutImage/imageOne.png";
 import imageTwo from "../../../public/assete/images/aboutImage/imageTwo.png";
-import education from "../../../public/assete/images/aboutImage/Nutrition Education in Action.PNG";
-import movementforhelth from "../../../public/assete/images/aboutImage/Unidos por un Mañana Saludable.PNG";
+import education from "../../../public/assete/images/aboutImage/Nutrition Education in Action.png";
+import movementforhelth from "../../../public/assete/images/aboutImage/Unidos por un Mañana Saludable.png";
 
 const Story = () => {
   return (
