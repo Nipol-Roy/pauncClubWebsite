@@ -3,6 +3,8 @@
 import EmailIcon from "@mui/icons-material/Email";
 import FacebookIcon from "@mui/icons-material/Facebook";
 import PhoneIcon from "@mui/icons-material/Phone";
+import Image from "next/image";
+import Logo from "../../public/assete/images/paunclogo.png";
 import Contractform from "./contractform";
 import Joinus from "./pages/join";
 import Map from "./pages/map";
@@ -13,7 +15,9 @@ const Contact = () => {
       <div className="relative shadow-inner shadow-[#dff07e] w-[90%] m-auto mt-10 min-h-[50vh] rounded-t-xl px-20 bg-[#f7fbf2] flex justify-center ">
         <div className="absolute top-0 h-1/3 lg:h-1/2 w-[95%] md:w-[90%] m-auto bg-[radial-gradient(#cde4a4_2px,transparent_2px)] [background-size:20px_20px] opacity-40"></div>
         <div className="flex flex-col w-full text-center items-center">
-          <div className="jd:my-[50px] mt-10">logo</div>
+          <div className="jd:my-[50px] mt-10 z-30 ">
+            <Image width={300} src={Logo} alt="logo" />
+          </div>
           <h2 className=" text-[25px] md:text-[45px] my-10">Contact US</h2>
           <p className="md:w-2/3 w-ful text-lg lg:text-xl ">
             Already a member or planning to join? Have suggestions or feedback?
@@ -34,7 +38,11 @@ const Contact = () => {
           </div>
           <div className="bg-[#234338] py-3 md:w-[310px] w-[300px] rounded-xl gap-3  flex flex-col justify-center items-center">
             <FacebookIcon fontSize="large" className="text-[#dff07e]" />
-            <div className="text-white">@pau Nutrition Club</div>
+            <div className="text-white cursor-pointer">
+              <a href="https://www.facebook.com/share/1CqCzvrT2q/">
+                Primeasia University Nutrition Club
+              </a>
+            </div>
           </div>
         </div>
       </div>

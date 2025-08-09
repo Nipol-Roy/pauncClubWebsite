@@ -16,8 +16,8 @@ const Join = () => {
             </div>
           </div>
           <div className=" md:text-start text-center">
-            <button className="  px-20 py-4 shadow-[#dff07e]   bg-[#cbea7b] md:mt-2 mt-5 rounded-xl">
-              Join
+            <button className=" hover:scale-105 duration-400  px-20 py-4 shadow-[#dff07e]   bg-[#cbea7b] md:mt-2 mt-5 rounded-xl">
+              <a href="https://www.facebook.com/share/1CqCzvrT2q/">Join Us</a>
             </button>
           </div>
         </div>

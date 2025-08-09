@@ -1,6 +1,6 @@
 /** @format */
 import Image from "next/image";
-import img from "../../../public/assete/images/logo.png";
+import img from "../../../public/assete/images/paunclogo.png";
 
 const Logo = () => {
   return (

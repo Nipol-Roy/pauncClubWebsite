@@ -3,8 +3,10 @@
 "use client";
 import CloseIcon from "@mui/icons-material/Close";
 import MenuIcon from "@mui/icons-material/Menu";
+import Image from "next/image";
 import Link from "next/link";
 import { useState } from "react";
+import Logo from "../../public/assete/images/paunclogo.png";
 
 const Navbar = () => {
   const [sidbar, setSidbar] = useState(false);
@@ -12,7 +14,9 @@ const Navbar = () => {
     <>
       <div className="bg-[rgb(26,49,41)] sticky shadow-2xl z-50  top-0 py-3 md:py-4 text-white max-w-[1920px] ">
         <div className="flex w-full lg:w-full xl:w-[95%] 2xl:w-[90%] m-auto px-10 justify-between ">
-          <div className="hover:scale-125 duration-200">logo</div>
+          <div className="hover:scale-125 duration-200">
+            <Image height={50} src={Logo} alt="logo" />
+          </div>
           <nav className="md:flex hidden ">
             <div className="flex items-center  text-md sm:text-lg md:gap-6 gap-5 xl:gap-10 justify-around ">
               <Link
@@ -52,15 +56,19 @@ const Navbar = () => {
               </button>
             </div>
           </nav>
-          <div className="md:hidden text-md sm:text-lg">
+          <div className="md:hidden  flex  text-md sm:text-lg">
             <button
               onClick={() => setSidbar(!sidbar)}
               className="cursor-pointer active:text-[#cbea75] focus:text-[#cbea75] hover:text-[#cbea75]"
             >
-              {sidbar ? <CloseIcon /> : <MenuIcon />}
+              {sidbar ? (
+                <CloseIcon sx={{ fontSize: "30px" }} />
+              ) : (
+                <MenuIcon sx={{ fontSize: "30px" }} />
+              )}
             </button>
             {sidbar && (
-              <div className="z-50 absolute bg-[rgb(26,49,41)] flex flex-col items-center gap-10 py-6 top-[49px] right-0 w-2/3 h-screen backdrop-blur-2xl">
+              <div className="z-50 absolute bg-[rgb(26,49,41)] flex flex-col items-center gap-10 py-6 top-[73px] right-0 w-2/3 h-screen backdrop-blur-2xl">
                 <Link
                   href="/"
                   className="focus:text-[#cbea75] focus:border focus:px-16 focus:rounded-md active:text-[#cbea75] hover:scale-125 duration-200 hover:text-[#cbea75] "

@@ -24,12 +24,12 @@ const Home = () => {
               University.
             </p>
             <button className="mt-6 px-6 py-3 bg-teal-600 hover:bg-teal-700 rounded-lg shadow-lg transition">
-              Join Us
+              <a href="https://www.facebook.com/share/1CqCzvrT2q/"> Join Us</a>
             </button>
           </div>
         </div>
       </div>
-      <div>
+      <div className="w-full">
         <Speech />
       </div>
     </div>

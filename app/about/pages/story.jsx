@@ -1,8 +1,13 @@
 /** @format */
 "use client";
 import Image from "next/image";
+import celiandcol from "../../../public/assete/images/aboutImage/Celebrating Health and Nutrition Together.PNG";
+import comunity from "../../../public/assete/images/aboutImage/Community Support Across Seasons.PNG";
+import futur from "../../../public/assete/images/aboutImage/Global Collaboration in Health and Nutrition.PNG";
 import imageOne from "../../../public/assete/images/aboutImage/imageOne.png";
 import imageTwo from "../../../public/assete/images/aboutImage/imageTwo.png";
+import education from "../../../public/assete/images/aboutImage/Nutrition Education in Action.PNG";
+import movementforhelth from "../../../public/assete/images/aboutImage/Unidos por un Mañana Saludable.PNG";
 
 const Story = () => {
   return (
@@ -95,7 +100,7 @@ const Story = () => {
               <div className="w-full bg-[#271b0f] flex justify-center items-center ">
                 <Image
                   className=" w-full h-[500px] md:h-[600px] 2xl:h-[400px]"
-                  src={imageTwo}
+                  src={education}
                   alt="history"
                 />
               </div>
@@ -122,7 +127,7 @@ const Story = () => {
               <div className="w-full bg-[#271b0f] flex justify-center items-center ">
                 <Image
                   className=" w-full h-[500px] "
-                  src={imageTwo}
+                  src={comunity}
                   alt="history"
                 />
               </div>
@@ -152,7 +157,7 @@ const Story = () => {
               <div className="w-full bg-[#271b0f] flex justify-center items-center ">
                 <Image
                   className=" w-full h-[600px]  xl:h-[550px]"
-                  src={imageTwo}
+                  src={comunity}
                   alt="history"
                 />
               </div>
@@ -163,7 +168,7 @@ const Story = () => {
               <div className="w-full bg-[#271b0f] flex justify-center items-center ">
                 <Image
                   className=" w-full h-[500px] lg:h-[400px]"
-                  src={imageTwo}
+                  src={futur}
                   alt="history"
                 />
               </div>
@@ -186,7 +191,7 @@ const Story = () => {
               <div className="w-full bg-[#271b0f] flex justify-center items-center ">
                 <Image
                   className=" w-full h-[500px] "
-                  src={imageTwo}
+                  src={celiandcol}
                   alt="history"
                 />
               </div>
@@ -214,7 +219,7 @@ const Story = () => {
               <div className="w-full bg-[#271b0f] flex justify-center items-center ">
                 <Image
                   className=" w-full  md:h-[600px] 2xl:h-[400px]"
-                  src={imageTwo}
+                  src={celiandcol}
                   alt="history"
                 />
               </div>
@@ -225,7 +230,7 @@ const Story = () => {
               <div className="w-full bg-[#271b0f] flex justify-center items-center ">
                 <Image
                   className=" w-full h-[500px] lg:h-[400px]"
-                  src={imageTwo}
+                  src={movementforhelth}
                   alt="history"
                 />
               </div>

@@ -6,15 +6,17 @@ import ArrowUpwardIcon from "@mui/icons-material/ArrowUpward";
 import EmailIcon from "@mui/icons-material/Email";
 import FacebookIcon from "@mui/icons-material/Facebook";
 import PhoneIcon from "@mui/icons-material/Phone";
+import Image from "next/image";
 import Link from "next/link";
+import Logo from "../../public/assete/images/paunclogo.png";
 
 const Footer = () => {
   return (
     <>
       <div className="w-full bg-[rgb(26,49,41)] text-lg text-white  md:p-10 relative flex flex-col justify-center items-center ">
         <div className="md:flex justify-between  items-center w-full  lg:w-[95%] py-3 px-2 sm:text-lg text-sm">
-          <div className=" m-2 flex gap-3  justify-start my-10 items-center">
-            Logo <div>Paunc</div>
+          <div className=" m-2 flex gap-3  justify-start  items-center">
+            <Image height={100} src={Logo} alt="" />
           </div>
 
           <div className="flex justify-center sm:px-5 md:px-0  items-center gap-[15px]  sm:gap-5  lg:gap-9">
@@ -73,8 +75,9 @@ const Footer = () => {
             <div className="border rounded-xl p-3 my-2   w-full md:w-[200px] hover:text-[#cbea75] flex items-center justify-center gap-3 bg-[#234338]  border-[#3c6154]">
               <PhoneIcon className="text-[#cbea75]" /> <p>+880123456789</p>
             </div>
-            <div className="border rounded-xl p-3 my-2 w-full md:w-[200px] hover:text-[#cbea75] flex items-center justify-center gap-3 bg-[#234338]  border-[#3c6154]">
-              <FacebookIcon className="text-[#cbea75]" /> <p>paunc</p>
+            <div className="border cursor-pointer rounded-xl p-3 my-2 w-full md:w-[200px] hover:text-[#cbea75] flex items-center justify-center gap-3 bg-[#234338]  border-[#3c6154]">
+              <FacebookIcon className="text-[#cbea75]" />{" "}
+              <a href="https://www.facebook.com/share/1CqCzvrT2q/">PAUNC</a>
             </div>
           </div>
           <div className="md:text-lg flex justify-center items-center  text-sm py-3 px-4">
