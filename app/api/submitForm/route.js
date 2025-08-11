@@ -16,9 +16,9 @@ export async function POST(req) {
       headers: { "Content-Type": "application/json" },
     });
   } catch (err) {
-    console.log("API Error:", err.messaage);
+    console.log("API Error:", err.message);
     return new NextResponse(
-      JSON.stringify({ success: false, message: err.message }, { status: 500 }),
+      JSON.stringify({ success: false, message: err.message }),
       {
         status: 500,
         headers: { "Content-Type": "application/json" },

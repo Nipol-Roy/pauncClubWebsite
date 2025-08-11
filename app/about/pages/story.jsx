@@ -16,7 +16,7 @@ const Story = () => {
         <div className="w-[90%]  my-5 ">
           <div className="flex justify-center   items-center w-full ">
             <div className=" w-full lg:flex justify-center items-center lg:flex-col p-2 sm:p-10 ">
-              <h3 className="  text-2xl font-bold p-5 text-center">
+              <h3 className="  text-3xl md:text-5xl font-bold p-5 text-center">
                 Our Story
               </h3>
               <div className="text-justify text-xl lg:w-3/4 p-5">
@@ -32,7 +32,7 @@ const Story = () => {
             <div className=" w-full md:w-1/2">
               <div className="w-full rounded-tl-xl   bg-[#feebc4] flex justify-center items-center border-[#d8f999] border-r-5">
                 <Image
-                  className=" w-full h-[450px] md:h-[600px] 2xl:h-[420px]"
+                  className=" w-full h-[450px] md:h-[620px] 2xl:h-[500px]"
                   src={imageOne}
                   alt="history"
                 />
@@ -196,11 +196,11 @@ const Story = () => {
                 />
               </div>
             </div>
-            <div className=" w-full  bg-[#f6fbe9] xl:p-10  md:w-1/2 md:h-[600px]  2xl:h-[400px] md:border-r-5 border-[#d8f999]">
+            <div className=" w-full  bg-[#f6fbe9] xl:p-10  md:w-1/2 md:h-[620px]  2xl:h-[420px] md:border-r-5 border-[#d8f999]">
               <div className=" w-full p-5  md:p-6  text-2xl font-bold text-center ">
                 Celebrations and Collaborations
               </div>
-              <div className="text-lg xl:text-xl  md:h-[600px]   2xl:h-[400px] p-5 text-justify ">
+              <div className="text-lg xl:text-xl  md:h-[620px]   2xl:h-[420px] p-5 text-justify ">
                 PAUNC’s social activities are no less remarkable. The club
                 actively celebrates World Food Day, Nutrition Week, and other
                 globally recognized health-related occasions. These celebrations

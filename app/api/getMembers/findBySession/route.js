@@ -8,13 +8,11 @@ export async function GET(request) {
     console.log("Connecting to database...");
     await connectDB();
     console.log("Database connected");
-
     
     const session = request.nextUrl.searchParams.get("session");
     console.log("Session received:", session);
 
     let members;
-
 
     if (session && session.trim() !== "") {
       members = await User.find({ session: session.trim() });

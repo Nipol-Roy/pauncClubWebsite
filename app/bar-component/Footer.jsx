@@ -16,7 +16,7 @@ const Footer = () => {
       <div className="w-full bg-[rgb(26,49,41)] text-lg text-white  md:p-10 relative flex flex-col justify-center items-center ">
         <div className="md:flex justify-between  items-center w-full  lg:w-[95%] py-3 px-2 sm:text-lg text-sm">
           <div className=" m-2 flex gap-3  justify-start  items-center">
-            <Image height={100} src={Logo} alt="" />
+            <Image height={80} src={Logo} alt="" />
           </div>
 
           <div className="flex justify-center sm:px-5 md:px-0  items-center gap-[15px]  sm:gap-5  lg:gap-9">
@@ -82,13 +82,12 @@ const Footer = () => {
           </div>
           <div className="md:text-lg flex justify-center items-center  text-sm py-3 px-4">
             <div>
-              {" "}
-              © 2023 Nutritionist. All rights reserved. Powerd By Anulesh{" "}
+              © Nutritionist. All rights reserved. Powerd By: &nbsp;
+              <span className="text-xl text-amber-300">Anulesh</span>
               <Link
                 href=" "
-                className=" cursor-pointer p-3 hover:text-[#cbea75] capitalize"
+                className=" cursor-pointer p-3 hover:text-[#cbea75] capitalize "
               >
-                {" "}
                 dev: Nipol
               </Link>
             </div>
