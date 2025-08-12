@@ -35,7 +35,7 @@ const MemberCard = ({ session }) => {
   return (
     <div className="grid grid-cols-1 xs:grid-cols-2 md:grid-cols-3   xl:grid-cols-4 2xl:grid-cols-5    justify-center    max-w-[1700px] gap-2 p-2">
       {loading
-        ? Array.from({ length: 10 }).map((_, i) => <Loading key={i} />)
+        ? Array.from({ length: 5 }).map((_, i) => <Loading key={i} />)
         : members.map((member, index) => (
             <div key={index} className=" relative  my-3   w-full ">
               <Image
