@@ -134,7 +134,7 @@ const Bar = () => {
             <div className="rounded-xl text-sm sm:text-xl">
               <div
                 onClick={() => setShowSession(!showSession)}
-                className="flex flex-col border sm:text-[15px] text-[13px] px-3 py-2 sm:px-3 sm:py-2 cursor-pointer rounded-xl active:scale-95 hover:bg-[#F4F8DC] hover:text-black"
+                className="flex flex-col border sm:text-[17px] text-[13px] px-3 py-2 sm:px-3 sm:py-3 cursor-pointer rounded-xl active:scale-95 hover:bg-[#F4F8DC] hover:text-black"
               >
                 {selectdSession}
               </div>
@@ -155,7 +155,7 @@ const Bar = () => {
                           setShowCard(true);
                           setShowSession(false);
                         }}
-                        className="px-5 py-2 border  hover:scale-105 cursor-pointer border-[#1A3129] rounded-xl"
+                        className="px-5 py-2 border duration-300 hover:bg-[#f4f8dc] hover:text-[#1A3129]  hover:scale-105 cursor-pointer border-[#1A3129] rounded-xl"
                       >
                         Session {session}
                       </div>
@@ -165,21 +165,21 @@ const Bar = () => {
               )}
             </div>
 
-            <div className="border py-2 px-3 sm:px-5 sm:py-3 sm:text-[15px] text-[13px] cursor-pointer active:scale-95 hover:bg-[#F4F8DC] hover:text-black sm:text-xl rounded-xl">
+            <div className="border py-2 px-3 sm:px-5 sm:py-3 sm:text-[17px] text-[13px] cursor-pointer active:scale-95 hover:bg-[#F4F8DC] hover:text-black sm:text-xl rounded-xl">
               Advisor
             </div>
-            <div className="border py-2 px-3 text-[13px] sm:px-5 sm:py-3 sm:text-[15px] cursor-pointer active:scale-95 hover:bg-[#F4F8DC] hover:text-black sm:text-xl rounded-xl">
+            <div className="border py-2 px-3 text-[13px] sm:px-5 sm:py-3 sm:text-[17px] cursor-pointer active:scale-95 hover:bg-[#F4F8DC] hover:text-black sm:text-xl rounded-xl">
               Facilitators
             </div>
 
             <div
-              className="px-3 sm:px-10 py-2 sm:py-3 border rounded-xl hover:scale-105 active:scale-105 border-white"
+              className="px-5 sm:px-10 py-2 text-[10px] material-icons text-icon-custom-medium   border rounded-xl hover:bg-[#f4f8dc]   hover:text-black border-white"
               onClick={() => {
                 setShowSearch(true);
                 setShowSession(false);
               }}
             >
-              <SearchIcon sx={{ fontSize: 20 }} />
+              <SearchIcon />
             </div>
           </div>
         </div>
