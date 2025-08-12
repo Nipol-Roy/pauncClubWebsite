@@ -48,7 +48,7 @@ const Bar = () => {
 
   return (
     <>
-      <div className="bg-[rgb(26,49,41)] rounded-b-xl">
+      <div className="bg-[rgb(26,49,41)] rounded-b-xl mb-5">
         {showSearch && (
           <div className="absolute w-[90%] pt-5 pb-4 z-30 bg-[#1A3129]  rounded-b-xl flex justify-center items-center flex-col">
             <div className="w-full flex justify-end sm:justify-center sm:hidden">
