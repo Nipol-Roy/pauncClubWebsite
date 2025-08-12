@@ -39,7 +39,7 @@ const Story = () => {
               </div>
             </div>
 
-            <div className=" w-full bg-[#f6fbe9] md:w-1/2 md:h-[600px] 2xl:h-[420px] xl:p-10   rounded-tr-xl ">
+            <div className=" w-full bg-[#f6fbe9] md:w-1/2 md:h-[620px] 2xl:h-[500px] xl:p-10   rounded-tr-xl ">
               <div className=" w-full md:text-xl text-2xl lg:text-2xl text-center font-bold p-5 md:p-3  ">
                 Our Beginning: A Vision Born in 2017
               </div>
@@ -197,7 +197,7 @@ const Story = () => {
               </div>
             </div>
             <div className=" w-full  bg-[#f6fbe9] xl:p-10  md:w-1/2 md:h-[600px]  2xl:h-[400px] md:border-r-5 border-[#d8f999]">
-              <div className=" w-full p-3  md:p-2  text-2xl font-bold text-center ">
+              <div className=" w-full p-3c  md:p-2  text-2xl font-bold text-center ">
                 Celebrations and Collaborations
               </div>
               <div className="text-lg xl:text-xl  md:h-[620px]   2xl:h-[420px] p-5 text-justify ">

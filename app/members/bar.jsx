@@ -6,6 +6,9 @@ import SearchIcon from "@mui/icons-material/Search";
 import { useState } from "react";
 import MembeCard from "./memberCard";
 
+import AcUnitTwoToneIcon from "@mui/icons-material/AcUnitTwoTone";
+import PersonOutlineTwoToneIcon from "@mui/icons-material/PersonOutlineTwoTone";
+
 const Bar = () => {
   const [showCard, setShowCard] = useState(true);
   const [showSession, setShowSession] = useState(false);
@@ -83,13 +86,13 @@ const Bar = () => {
                 {showRes && (
                   <>
                     {searchData && (
-                      <div className="w-full cursor-pointer max-w-xl mt-2 rounded-xl bg-white p-4 flex items-center gap-4 shadow-md hover:shadow-lg transition">
+                      <div className="w-full max-w-xl mt-2 rounded-xl bg-white p-2 flex items-center gap-4 shadow-md hover:shadow-lg transition">
                         <img
                           src={searchData.member.image}
                           alt="Profile"
                           className="w-16 h-16 rounded-full border-2 bg-[#CBEA75] border-[#CBEA75] object-cover"
                         />
-                        <div className="text-left text-[#1A3129]">
+                        <div className="text-left text-[#1A3129] w-full">
                           <div className="text-lg font-semibold">
                             {searchData.member.fullName}
                           </div>
@@ -98,6 +101,32 @@ const Bar = () => {
                           </div>
                           <div className="text-xs text-gray-600">
                             {searchData.member.memberId}
+                          </div>
+                        </div>
+                        <div className="">
+                          <div className="flex flex-col  justify-center items-center">
+                            <div
+                              className={` flex justify-center items-center     ${
+                                searchData.member.rank == "green"
+                                  ? "text-[#08CB00] "
+                                  : searchData.member.rank == "blue"
+                                  ? "text-[#0046FF]"
+                                  : searchData.member.rank == "gold"
+                                  ? "text-[#FFC900]"
+                                  : searchData.member.rank == "silver"
+                                  ? "text-[#DDDAD0]"
+                                  : ""
+                              }  `}
+                            >
+                              {searchData.member.rank == "executive member" ? (
+                                <AcUnitTwoToneIcon />
+                              ) : (
+                                <PersonOutlineTwoToneIcon fontSize="large" />
+                              )}
+                            </div>
+                            <div className="px-7 py-2 border bg-gray-400 text-white rounded-xl hover:bg-[#1a3129] text-sm cursor-pointer duration-300 hover:text-white">
+                              Visit
+                            </div>
                           </div>
                         </div>
                       </div>
@@ -129,12 +158,12 @@ const Bar = () => {
           </div>
         )}
 
-        <div className="w-full border-[#1A3129] p-2 sm:p-5">
+        <div className="w-full border-[#1A3129] py-2 sm:p-5">
           <div className="text-center w-full flex justify-center text-white gap-1 sm:gap-8 items-center">
             <div className="rounded-xl text-sm sm:text-xl">
               <div
                 onClick={() => setShowSession(!showSession)}
-                className="flex flex-col border sm:text-[17px] text-[13px] px-3 py-2 sm:px-3 sm:py-3 cursor-pointer rounded-xl active:scale-95 hover:bg-[#F4F8DC] hover:text-black"
+                className="flex flex-col border sm:text-[17px] text-[11px] p-2.5 sm:px-3 sm:py-3 cursor-pointer rounded-sm active:scale-95 hover:bg-[#F4F8DC] hover:text-black"
               >
                 {selectdSession}
               </div>
@@ -155,7 +184,7 @@ const Bar = () => {
                           setShowCard(true);
                           setShowSession(false);
                         }}
-                        className="px-5 py-2 border duration-300 hover:bg-[#f4f8dc] hover:text-[#1A3129]  hover:scale-105 cursor-pointer border-[#1A3129] rounded-xl"
+                        className="px-5 py-2 border duration-300 hover:bg-[#f4f8dc] hover:text-[#1A3129]  hover:scale-105 cursor-pointer border-[#1A3129] rounded-sm"
                       >
                         Session {session}
                       </div>
@@ -165,21 +194,21 @@ const Bar = () => {
               )}
             </div>
 
-            <div className="border py-2 px-3 sm:px-5 sm:py-3 sm:text-[17px] text-[13px] cursor-pointer active:scale-95 hover:bg-[#F4F8DC] hover:text-black sm:text-xl rounded-xl">
+            <div className="border py-2 px-3 sm:px-5 sm:py-3 sm:text-[17px] text-[13px] cursor-pointer active:scale-95 hover:bg-[#F4F8DC] hover:text-black sm:text-xl rounded-sm">
               Advisor
             </div>
-            <div className="border py-2 px-3 text-[13px] sm:px-5 sm:py-3 sm:text-[17px] cursor-pointer active:scale-95 hover:bg-[#F4F8DC] hover:text-black sm:text-xl rounded-xl">
+            <div className="border py-2 px-3 text-[13px] sm:px-5 sm:py-3 sm:text-[17px] cursor-pointer active:scale-95 hover:bg-[#F4F8DC] hover:text-black sm:text-xl rounded-sm">
               Facilitators
             </div>
 
             <div
-              className="px-5 sm:px-10 py-2 text-[10px] material-icons text-icon-custom-medium   border rounded-xl hover:bg-[#f4f8dc]   hover:text-black border-white"
+              className="px-5 sm:px-10 py-1 text-[20px]   border rounded-sm hover:bg-[#f4f8dc]   hover:text-black border-white"
               onClick={() => {
                 setShowSearch(true);
                 setShowSession(false);
               }}
             >
-              <SearchIcon />
+              <SearchIcon fontSize="20px" />
             </div>
           </div>
         </div>
