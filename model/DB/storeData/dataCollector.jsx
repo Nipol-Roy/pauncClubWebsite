@@ -195,18 +195,21 @@ const DataCollector = () => {
                  file:rounded-xl file:border-0 file:text-sm file:font-semibold
                  file:bg-[#1A3129] file:text-[#CBEA75] hover:file:bg-[#274D40]"
                   />
-                  <div className="mt-5 border">
+                  <div className="mt-5 text-center md:text-left   py-3">
                     <DropdownMenu>
                       <DropdownMenuTrigger asChild>
-                        <Button variant="outline">
+                        <Button
+                          variant="outline"
+                          className="py-6 w-[264px] text-center text-md"
+                        >
                           {formData.rank
                             ? formData.rank.charAt(0).toUpperCase() +
                               formData.rank.slice(1)
-                            : "Select Rank"}
+                            : "MemberShif Type"}
                         </Button>
                       </DropdownMenuTrigger>
-                      <DropdownMenuContent className="w-56">
-                        <DropdownMenuLabel>Select Your Rank</DropdownMenuLabel>
+                      <DropdownMenuContent className="w-[270px] ">
+                        <DropdownMenuLabel>Select Your Type</DropdownMenuLabel>
                         <DropdownMenuSeparator />
                         <DropdownMenuRadioGroup
                           value={formData.rank}
@@ -214,14 +217,20 @@ const DataCollector = () => {
                             setFormData({ ...formData, rank: value })
                           }
                         >
-                          <DropdownMenuRadioItem value="top">
-                            Top
+                          <DropdownMenuRadioItem value="gold">
+                            Gold
                           </DropdownMenuRadioItem>
-                          <DropdownMenuRadioItem value="bottom">
-                            Bottom
+                          <DropdownMenuRadioItem value="silver">
+                            Silver
                           </DropdownMenuRadioItem>
-                          <DropdownMenuRadioItem value="right">
-                            Right
+                          <DropdownMenuRadioItem value="executive member">
+                            Executive Member
+                          </DropdownMenuRadioItem>
+                          <DropdownMenuRadioItem value="blue">
+                            Blue
+                          </DropdownMenuRadioItem>
+                          <DropdownMenuRadioItem value="green">
+                            Green
                           </DropdownMenuRadioItem>
                         </DropdownMenuRadioGroup>
                       </DropdownMenuContent>

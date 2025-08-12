@@ -1,6 +1,7 @@
 /** @format */
 "use client";
 
+import AcUnitTwoToneIcon from "@mui/icons-material/AcUnitTwoTone";
 import Image from "next/image";
 import { useEffect, useState } from "react";
 import Loading from "../../components/Loading";
@@ -32,11 +33,11 @@ const MemberCard = ({ session }) => {
     if (session) fetchMembers();
   }, [session]);
   return (
-    <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3  lg:grid-cols-4 xl:grid-cols-4 2xl:grid-cols-5    justify-center    max-w-[1700px] gap-2 p-4">
+    <div className="grid grid-cols-1 xs:grid-cols-2 md:grid-cols-3   xl:grid-cols-4 2xl:grid-cols-5    justify-center    max-w-[1700px] gap-2 p-2">
       {loading
         ? Array.from({ length: 10 }).map((_, i) => <Loading key={i} />)
         : members.map((member, index) => (
-            <div key={index} className=" relative    w-full ">
+            <div key={index} className=" relative  my-3   w-full ">
               <Image
                 src={CardbgImg}
                 alt="background image"
@@ -54,7 +55,7 @@ const MemberCard = ({ session }) => {
                   </div>
                 )}
 
-                <div className=" flex justify-between items-center  font-semibold  text-center w-full absolute bottom-[-40px] box-border text-base/5 bg-[#1a3129] text-white px-10 py-2  rounded-b-md   text-[14px]  ">
+                <div className=" flex justify-between items-center mb-10  font-semibold  text-center w-full absolute bottom-[-40px] box-border text-base/5 bg-[#1a3129] text-white px-10 py-2  rounded-b-md   text-[14px]  ">
                   <div className="">
                     <div className="text-[15px] uppercase font-bold">
                       {member.fullName}
@@ -64,9 +65,31 @@ const MemberCard = ({ session }) => {
                       ID: {member.memberId}
                     </div>
                   </div>
-                  <div className="flex flex-col gap-4">
-                    <div className="px-5 py-2 border">hello</div>
-                    <div>hi</div>
+                  <div className="flex flex-col gap-2">
+                    <div className="px-5 py-2 border rounded-xl hover:bg-white text-sm cursor-pointer duration-300 hover:text-[#1a3129]">
+                      Visit
+                    </div>
+                    <div
+                      className={`px-5 py-2 flex justify-center items-center h-9 rounded-xl ${
+                        member.rank == "green"
+                          ? "bg-[#08CB00]"
+                          : member.rank == "blue"
+                          ? "bg-[#0046FF]"
+                          : member.rank == "gold"
+                          ? "bg-[#FFC900]"
+                          : member.rank == "silver"
+                          ? "bg-[#DDDAD0]"
+                          : "bg-black"
+                      }  `}
+                    >
+                      <div className="">
+                        {member.rank == "executive member" ? (
+                          <AcUnitTwoToneIcon />
+                        ) : (
+                          ""
+                        )}
+                      </div>
+                    </div>
                   </div>
                 </div>
               </div>
