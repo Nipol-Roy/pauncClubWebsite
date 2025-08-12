@@ -33,7 +33,7 @@ const MemberCard = ({ session }) => {
     if (session) fetchMembers();
   }, [session]);
   return (
-    <div className="grid grid-cols-1 xs:grid-cols-2 md:grid-cols-3   xl:grid-cols-4 2xl:grid-cols-5    justify-center    max-w-[1700px] gap-2 p-2">
+    <div className="grid grid-cols-1 xs:grid-cols-2 md:grid-cols-3   xl:grid-cols-4 2xl:grid-cols-5    justify-center    max-w-[1700px] gap-2 ">
       {loading
         ? Array.from({ length: 5 }).map((_, i) => <Loading key={i} />)
         : members.map((member, index) => (
@@ -41,7 +41,7 @@ const MemberCard = ({ session }) => {
               <Image
                 src={CardbgImg}
                 alt="background image"
-                className=" absolute top-5 opacity-50 scale-125 left-0"
+                className=" absolute top-5 opacity-20 scale-110 left-0"
               />
               <div className="bg-white  rounded-xl shadow-lg">
                 {member.image && (
