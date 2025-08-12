@@ -2,7 +2,20 @@
 
 import { useState } from "react";
 
+import { Button } from "@/components/ui/button";
+import {
+  DropdownMenu,
+  DropdownMenuContent,
+  DropdownMenuLabel,
+  DropdownMenuRadioGroup,
+  DropdownMenuRadioItem,
+  DropdownMenuSeparator,
+  DropdownMenuTrigger,
+} from "@/components/ui/dropdown-menu";
+
 const DataCollector = () => {
+  const [position, setPosition] = useState("bottom");
+
   const [successMessage, setSuccessMessage] = useState("");
   const [showForm, setShowForm] = useState(false);
   const [error, setError] = useState("");
@@ -14,6 +27,7 @@ const DataCollector = () => {
     speech: "",
     session: "",
     image: "",
+    rank: "",
   });
 
   const handleChange = (e) => {
@@ -75,11 +89,8 @@ const DataCollector = () => {
       speech: "",
       session: "",
       image: "",
+      rank: "",
     });
-    // setError("");
-    // setTimeout(() => {
-    //   setSuccessMessage("");
-    // }, 5000);
   };
 
   return (
@@ -184,6 +195,38 @@ const DataCollector = () => {
                  file:rounded-xl file:border-0 file:text-sm file:font-semibold
                  file:bg-[#1A3129] file:text-[#CBEA75] hover:file:bg-[#274D40]"
                   />
+                  <div className="mt-5 border">
+                    <DropdownMenu>
+                      <DropdownMenuTrigger asChild>
+                        <Button variant="outline">
+                          {formData.rank
+                            ? formData.rank.charAt(0).toUpperCase() +
+                              formData.rank.slice(1)
+                            : "Select Rank"}
+                        </Button>
+                      </DropdownMenuTrigger>
+                      <DropdownMenuContent className="w-56">
+                        <DropdownMenuLabel>Select Your Rank</DropdownMenuLabel>
+                        <DropdownMenuSeparator />
+                        <DropdownMenuRadioGroup
+                          value={formData.rank}
+                          onValueChange={(value) =>
+                            setFormData({ ...formData, rank: value })
+                          }
+                        >
+                          <DropdownMenuRadioItem value="top">
+                            Top
+                          </DropdownMenuRadioItem>
+                          <DropdownMenuRadioItem value="bottom">
+                            Bottom
+                          </DropdownMenuRadioItem>
+                          <DropdownMenuRadioItem value="right">
+                            Right
+                          </DropdownMenuRadioItem>
+                        </DropdownMenuRadioGroup>
+                      </DropdownMenuContent>
+                    </DropdownMenu>
+                  </div>
                 </div>
               </div>
               <div>
