@@ -58,7 +58,7 @@ const MemberDetailsPage = () => {
   return (
     <>
       <div className="w-full max-w-[2600px] h-full m-auto bg-gray-50">
-        <div className="md:h-[50vh] h-[58vh] w-full md:m-auto flex relative justify-center md:justify-between ">
+        <div className="md:h-[50vh]  w-full md:m-auto flex relative justify-center md:justify-between ">
           <div className="absolute inset-0 z-0 overflow-hidden">
             <svg
               className="w-full h-full"
@@ -77,7 +77,7 @@ const MemberDetailsPage = () => {
               <path d="M40,0 L40,60" stroke="#a3b18a" strokeWidth="0.5" />
             </svg>
           </div>
-          <div className="absolute top-2 left-2 md:top-8 md:left-8 ">
+          <div className="absolute top-2 left-2 md:top-8 md:left-8 z-30">
             <button
               onClick={() => router.back()}
               className="px-5 py-2 border-2 hover:border-[#236456] rounded-lg  bg-[#236456] text-white hover:bg-white hover:text-[#236456] transition cursor-pointer"
@@ -87,7 +87,7 @@ const MemberDetailsPage = () => {
           </div>
 
           <div className="w-full  sm:w-[90%] md:w-[85%]  m-auto  p-5 z-10 flex flex-col md:flex-row justify-center md:justify-between items-center">
-            <div className="w-[300px] h-[300px] rounded-full block lg:hidden relative overflow-hidden">
+            <div className="w-[300px] h-[300px] rounded-full block lg:hidden relative object-cover overflow-hidden">
               {member?.image && (
                 <div className=" bg-white relative border-double rounded-full border-4 border-[#236456] overflow-hidden ">
                   <Image
@@ -149,37 +149,37 @@ const MemberDetailsPage = () => {
           <div className="lg:w-1/2 w-full h-full  px-5  xl:px-32 py-5 md:py-10">
             <div className=" text-4xl text-[#236456] font-bold flex items-center">
             
-              <ContactEmergencyOutlinedIcon
-                sx={{ fontSize: 30, marginLeft: 5, marginRight: 2 }}
+              <ContactEmergencyOutlinedIcon className=" ml-4 mr-2"
+                sx={{ fontSize: 30}}
               />
               <h2 className="px-4">Information</h2>
             </div>
             <div className="w-full my-5 flex flex-col gap-5">
-              <div className="w-full border py-2 md:py-5 md:px-3 px-0 rounded-xl bg-white text-[#236456] flex items-center justify-start">
+              <div className="w-full border py-2 md:py-5 md:px-3 px-0 rounded-xl bg-white text-[#236456] relative flex items-center justify-start">
                 <BadgeOutlinedIcon sx={{ fontSize: 30 }} className="m-5" />
                 <div className="px-5 border-l-2 border-[#236456] border-dashed text-md">
-                  <h2>Member ID</h2>
-                  <p className=" text-xl">{member.memberId}</p>
+                  <h2 className="text-sm md:text-md ">Member ID</h2>
+                  <p className=" text-md md:text-lg">{member.memberId}</p>
                 </div>
               </div>
-              <div className="w-full border py-2 md:py-5 md:px-3 px-0 rounded-xl bg-white text-[#236456] flex items-center justify-start">
+              <div className="w-full border py-2 md:py-5 md:px-3 px-0 rounded-xl relative bg-white text-[#236456] flex items-center justify-start">
                 <AlternateEmailRoundedIcon
                   sx={{ fontSize: 30 }}
                   className="m-5"
                 />
                 <div className="px-5 border-l-2 border-[#236456] border-dashed text-md">
-                  <h2>Email</h2>
-                  <p className=" text-xl">{member.email}</p>
+                  <h2 className="text-sm md:text-md">Email</h2>
+                  <p className=" text-md md:text-lg">{member.email}</p>
                 </div>
               </div>
-              <div className="w-full border py-2 md:py-5 md:px-3 px-0 rounded-xl bg-white text-[#236456] flex items-center justify-start">
+              <div className="w-full border py-2 md:py-5 md:px-3 px-0 relative rounded-xl bg-white text-[#236456] flex items-center justify-start">
                 <CalendarMonthOutlinedIcon
                   sx={{ fontSize: 30 }}
                   className="m-5"
                 />
                 <div className="px-5 border-l-2 border-[#236456] border-dashed text-md">
-                  <h2>Session</h2>
-                  <p className=" text-xl">{member.session}</p>
+                  <h2 className="text-sm md:text-md">Session</h2>
+                  <p className=" text-md md:text-lg">{member.session}</p>
                 </div>
               </div>
             </div>
