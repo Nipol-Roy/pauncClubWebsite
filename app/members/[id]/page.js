@@ -101,10 +101,10 @@ const MemberDetailsPage = () => {
             </div>
 
             <div className="p-5 text-center">
-              <div className="text-4xl text-[#588157]  md:text-5xl lg:text-7xl font-bold  p-2">
+              <div className="text-2xl text-[#588157]  md:text-5xl lg:text-7xl font-bold  p-2">
                 {member.fullName}
               </div>
-              <div className="text-2xl md:text-3xl lg:text-4xl capitalize text-[#588157] ">
+              <div className="text-lg md:text-xl lg:text-2xl capitalize text-[#588157] ">
                 {member.designation}
               </div>
 
@@ -150,7 +150,7 @@ const MemberDetailsPage = () => {
             <div className=" text-4xl text-[#236456] font-bold flex items-center">
             
               <ContactEmergencyOutlinedIcon className=" ml-4 mr-2"
-                sx={{ fontSize: 30}}
+                sx={{ fontSize: 25}}
               />
               <h2 className="px-4">Information</h2>
             </div>
@@ -189,7 +189,7 @@ const MemberDetailsPage = () => {
            <div className=" text-4xl text-[#236456] font-bold flex items-center">
             
               <CompostOutlinedIcon
-                sx={{ fontSize: 30,  marginRight: 1 }}
+                sx={{ fontSize: 25,  marginRight: 1 }}
               />
               <h2 className="px-2 lg:py-5 ">Bio</h2>
             </div>

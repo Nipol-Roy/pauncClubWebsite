@@ -8,6 +8,7 @@ import MembeCard from "./memberCard";
 
 import AcUnitTwoToneIcon from "@mui/icons-material/AcUnitTwoTone";
 import PersonOutlineTwoToneIcon from "@mui/icons-material/PersonOutlineTwoTone";
+import Link from "next/link";
 
 const Bar = () => {
   const [showCard, setShowCard] = useState(true);
@@ -125,7 +126,9 @@ const Bar = () => {
                               )}
                             </div>
                             <div className="px-7 py-2 border bg-gray-400 text-white rounded-xl hover:bg-[#1a3129] text-sm cursor-pointer duration-300 hover:text-white">
-                              Visit
+                              <Link href={`/members/${searchData.member._id}`}>
+                                Visit
+                              </Link>
                             </div>
                           </div>
                         </div>
