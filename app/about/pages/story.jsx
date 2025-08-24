@@ -32,7 +32,7 @@ const Story = () => {
             <div className=" w-full md:w-1/2">
               <div className="w-full rounded-tl-xl   bg-[#feebc4] flex justify-center items-center border-[#d8f999] border-r-5">
                 <Image
-                  className=" w-full h-[450px] md:h-[620px] 2xl:h-[500px]"
+                  className=" w-full h-[450px]  md:h-[620px] 2xl:h-[500px]"
                   src={imageOne}
                   alt="history"
                 />

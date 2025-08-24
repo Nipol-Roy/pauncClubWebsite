@@ -4,20 +4,14 @@
 import Image from "next/image";
 import DataCollector from "../../model/DB/storeData/dataCollector";
 import BgimgTwo from "../../public/assete/images/pagesbg/backgroundThree.png";
-import BgImg from "../../public/assete/images/pagesbg/memberBg.png";
 import Logo from "../../public/assete/images/paunclogo.png";
 import Bar from "./bar";
 
 const Member = () => {
   return (
     <>
-      <div className="relative shadow-inner shadow-[#dff07e] w-[90%] m-auto mt-10 min-h-[50vh] rounded-t-xl px-5  md:px-20 py-5  bg-[#f4f8dc] flex justify-center ">
+      <div className="relative shadow-inner shadow-[#1A3129] w-[90%] m-auto mt-10 min-h-[50vh] rounded-t-xl px-5  md:px-20 py-5  bg-gray-100 flex justify-center ">
         <div className="absolute top-0 h-1/3 lg:h-1/2 w-[95%] md:w-[90%] m-auto bg-[radial-gradient(#cde4a4_2px,transparent_2px)] [background-size:20px_20px] opacity-40"></div>
-        <Image
-          src={BgImg}
-          alt="bacground image "
-          className=" absolute left-0 top-40 md:top-10 "
-        />
 
         <Image
           src={BgimgTwo}

@@ -13,7 +13,7 @@ const Bar = () => {
   const [showCard, setShowCard] = useState(true);
   const [showSession, setShowSession] = useState(false);
   const [showSearch, setShowSearch] = useState(false);
-  const [selectdSession, setSelectedSession] = useState("2023-2024");
+  const [selectdSession, setSelectedSession] = useState("2022-2023");
 
   const [searchID, setSearchID] = useState("");
   const [searchData, setSearchData] = useState(null);
@@ -202,13 +202,13 @@ const Bar = () => {
             </div>
 
             <div
-              className="px-5 sm:px-10 py-1 text-[20px]   border rounded-sm hover:bg-[#f4f8dc]   hover:text-black border-white"
+              className="px-5 sm:px-10 py-1 md:py-2 text-[20px]   border rounded-sm hover:bg-[#f4f8dc]   hover:text-black border-white"
               onClick={() => {
                 setShowSearch(true);
                 setShowSession(false);
               }}
             >
-              <SearchIcon fontSize="20px" />
+              <SearchIcon fontSize="medium" />
             </div>
           </div>
         </div>

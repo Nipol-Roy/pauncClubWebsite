@@ -15,44 +15,44 @@ const Footer = () => {
     <>
       <div className="w-full bg-[rgb(26,49,41)] text-lg text-white  md:p-10 relative flex flex-col justify-center items-center ">
         <div className="md:flex justify-between  items-center w-full  lg:w-[95%] py-3 px-2 sm:text-lg text-sm">
-          <div className=" m-2 flex gap-3  justify-start  items-center">
-            <Image height={80} src={Logo} alt="" />
+          <div className=" m-5 flex gap-3  justify-start  items-center">
+            <Image height={75} src={Logo} alt="" />
           </div>
 
           <div className="flex justify-center sm:px-5 md:px-0  items-center gap-[15px]  sm:gap-5  lg:gap-9">
             <Link
               href="/"
-              className="focus:text-[#cbea75] active:text-[#cbea75] hover:scale-125 duration-200 hover:text-[#cbea75] "
+              className="focus:text-[#cbea75] md:text-2xl active:text-[#cbea75] hover:scale-125 duration-200 hover:text-[#cbea75] "
             >
               Home
             </Link>
 
             <Link
               href="/about"
-              className="focus:text-[#cbea75] active:text-[#cbea75] hover:scale-125 duration-200 hover:text-[#cbea75] "
+              className="focus:text-[#cbea75] md:text-2xl active:text-[#cbea75] hover:scale-125 duration-200 hover:text-[#cbea75] "
             >
               About
             </Link>
             <Link
               href="/contact"
-              className="focus:text-[#cbea75] active:text-[#cbea75] hover:scale-125 duration-200 hover:text-[#cbea75] "
+              className="focus:text-[#cbea75] md:text-2xl active:text-[#cbea75] hover:scale-125 duration-200 hover:text-[#cbea75] "
             >
               Contact
             </Link>
             <Link
               href="/events"
-              className="focus:text-[#cbea75] active:text-[#cbea75] hover:scale-125 duration-200 hover:text-[#cbea75] "
+              className="focus:text-[#cbea75] md:text-2xl active:text-[#cbea75] hover:scale-125 duration-200 hover:text-[#cbea75] "
             >
               Event
             </Link>
             <Link
               href="/members"
-              className="focus:text-[#cbea75] active:text-[#cbea75] hover:scale-125 duration-200 hover:text-[#cbea75] "
+              className="focus:text-[#cbea75] md:text-2xl active:text-[#cbea75] hover:scale-125 duration-200 hover:text-[#cbea75] "
             >
               Member
             </Link>
           </div>
-          <div className="md:relative absolute mx-3 text-center right-0 top-10  sm:right-8 md:top-0 md:right-0">
+          <div className="md:relative absolute  mx-3 text-center text-xl right-2 top-10  sm:right-8 md:top-0 md:right-0">
             Go To Top{" "}
             <button
               onClick={() =>
@@ -61,7 +61,7 @@ const Footer = () => {
                   behavior: "smooth",
                 })
               }
-              className="px-4 py-3 sm:m-4 rounded-full bg-[#234338] cursor-pointer"
+              className="md:px-10 md:py-4 sm:m-3 px-7 py-4  mx-3 rounded-lg hover: bg-[#234338] cursor-pointer"
             >
               <ArrowUpwardIcon />
             </button>

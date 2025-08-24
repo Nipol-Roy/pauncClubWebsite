@@ -5,7 +5,7 @@ import presidentImg from "../../public/assete/images/speechImage/WhatsApp Image 
 
 const Speech = () => {
   return (
-    <div className=" w-full py-10 bg-[#f9fafb] ">
+    <div className=" w-full py-10 bg-gray-300 ">
       <div>
         <section className="w-full   my-10 ">
           <div className="  w-[90%]  mx-auto">
