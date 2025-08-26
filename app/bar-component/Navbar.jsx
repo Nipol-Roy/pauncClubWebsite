@@ -3,14 +3,21 @@
 "use client";
 
 import CloseIcon from "@mui/icons-material/Close";
+import CloseOutlinedIcon from "@mui/icons-material/CloseOutlined";
 import MenuIcon from "@mui/icons-material/Menu";
 import Image from "next/image";
 import Link from "next/link";
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import Logo from "../../public/assete/images/paunclogo.png";
+import subscribebgImg from "../../public/subscriebgImage.jpg";
 
 const Navbar = () => {
   const [sidbar, setSidbar] = useState(false);
+  const [subscribeBox, setSubscribeBox] = useState(false);
+
+  useEffect(() => {
+    document.body.style.overflow = subscribeBox ? "hidden" : "auto";
+  });
 
   // useGSAP(() => {
   //   const tl = gsap.timeline();
@@ -86,9 +93,68 @@ const Navbar = () => {
                 Event
               </Link>
 
-              <button className="px-4 py-1 text-xl bg-gray-300 text-black hover:scale-110 hover:shadow-gray-400 hover:shadow-lg transition duration-200 rounded-lg btnItems ">
+              <button
+                onClick={() => {
+                  setSubscribeBox(true);
+                }}
+                className="px-4 py-1 text-xl bg-gray-300 text-black hover:scale-110 hover:shadow-gray-400 hover:shadow-lg transition duration-200 rounded-lg btnItems "
+              >
                 Subscrbe
               </button>
+              <div
+                className={`w-full h-full  fixed backdrop-blur-3xl top-0 left-0 flex justify-center items-center ${
+                  subscribeBox == true ? "block" : "hidden"
+                } `}
+              >
+                <div className="xl:w-[60%] xl:h-[80%] lg:h-[75%] lg:w-[75%] h-[80%]  w-[90%]   rounded-2xl relative">
+                  <div className="  h-full  rounded-2xl ">
+                    <Image
+                      src={subscribebgImg}
+                      alt="subscrib background  image"
+                      className="object-cover  h-full w-full rounded-2xl"
+                    />
+
+                    <div className="w-full h-full flex justify-center items-start mt-10 absolute top-0">
+                      <div className="text-black w-[80%] lg:w-[60%] flex flex-col justify-around ">
+                        <h2 className="text-[50px] py-5 text-[#f7aa77] font-bold text-center">
+                          <span className=" text-[60px] lg:text-[80px] block text-[#cf351b]">
+                            Subscribe
+                          </span>{" "}
+                          to our Newsletter
+                        </h2>
+                        <p className="py-5 text-lg lg:text-2xl text-justify">
+                          Subscribe to the Primeasia University Nutrition Club
+                          and never miss out on our latest events, wellness
+                          tips, and healthy lifestyle updates. Join our
+                          community and fuel your journey toward better health.
+                        </p>
+                        <div className="relative ">
+                          <input
+                            type="text"
+                            className=" py-4 w-full px-5  mt-5 text-xl text-white bg-[#528934] outline-none border-[#E0B596] border-2 rounded-xl"
+                            placeholder="Enter Your Email"
+                          />
+                          <div className=" flex justify-center items-center absolute bottom-[2px] right-0  ">
+                            <button className="px-10 py-[16px]  text-white font-bold  text-xl font-mono  cursor-pointer duration-400 bg-[#E0B596] rounded-r-xl">
+                              Send
+                            </button>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div className="w-full h-full">
+                    <button
+                      onClick={() => {
+                        setSubscribeBox(false);
+                      }}
+                      className=" absolute top-5 cursor-pointer hover:scale-125 text-black  transition duration-400 ease-in-out right-5 "
+                    >
+                      <CloseOutlinedIcon sx={{ fontSize: 40 }} />
+                    </button>
+                  </div>
+                </div>
+              </div>
             </div>
           </nav>
           <div className="md:hidden  flex  text-md sm:text-lg ">
@@ -136,11 +202,72 @@ const Navbar = () => {
                   Event
                 </Link>
 
-                <button className="px-4 py-1 text-xl bg-[#cbea75] text-black hover:scale-110 hover:shadow-gray-400 hover:shadow-lg transition duration-200 rounded-lg">
+                <button
+                  onClick={() => {
+                    setSubscribeBox(true);
+                    setSidbar(false);
+
+                    document.body.style.overflow = "hidden";
+                  }}
+                  className="px-4 py-1 text-xl bg-gray-300 text-black hover:scale-110 hover:shadow-gray-400 hover:shadow-lg transition duration-200 rounded-lg btnItems "
+                >
                   Subscrbe
                 </button>
               </div>
             )}
+          </div>
+
+          <div
+            className={`w-full h-full md:hidden fixed backdrop-blur-3xl top-0 left-0 flex justify-center items-center ${
+              subscribeBox == true ? "block" : "hidden"
+            } `}
+          >
+            <div className="w-[90%] h-[80%]">
+              <div className="h-full relative rounded-xl">
+                <Image
+                  src={subscribebgImg}
+                  alt="subscrib background image"
+                  className="object-cover  h-full w-full rounded-2xl"
+                />
+                <div className="w-full absolute flex justify-center items-center top-0 h-full">
+                  <button
+                    onClick={() => {
+                      setSubscribeBox(false);
+                    }}
+                    className=" absolute top-5 cursor-pointer hover:scale-125 text-black  transition duration-400 ease-in-out right-5 "
+                  >
+                    <CloseOutlinedIcon sx={{ fontSize: 40 }} />
+                  </button>
+
+                  <div className="text-black w-[95%] flex flex-col justify-around ">
+                    <h2 className="text-[30px] py-3 text-[#f7aa77] font-bold text-center">
+                      <span className=" text-[50px] block text-[#cf351b]">
+                        Subscribe
+                      </span>
+                      to our Newsletter
+                    </h2>
+                    <p className=" text-md py-5 px-3 text-justify">
+                      Subscribe to the Primeasia University Nutrition Club and
+                      never miss out on our latest events, wellness tips, and
+                      healthy lifestyle updates. Join our community and fuel
+                      your journey toward better health.
+                    </p>
+                    <div className="relative ">
+                      <input
+                        type="text"
+                        className=" py-3 w-full px-3  mt-3 text-xl text-white bg-[#528934] outline-none border-[#E0B596] border-2 rounded-xl"
+                        placeholder="Enter Your Email"
+                      />
+                    </div>
+                    <div className=" flex justify-center items-center   ">
+                      <button className="px-5 py-3  text-white font-bold w-[50%] mt-5 mb-10  text-xl font-mono  cursor-pointer duration-400 bg-[#E0B596] rounded-xl">
+                        Send
+                      </button>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
           </div>
         </div>
       </div>

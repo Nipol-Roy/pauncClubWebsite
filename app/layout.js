@@ -12,7 +12,6 @@ export default function RootLayout({ children }) {
     <html lang="en">
       <head>
         <link rel="shortcut icon" href="/paunclogo.png" sizes="30px" type="image/png" />
-       
       </head>
       <body>
         <Navbar />

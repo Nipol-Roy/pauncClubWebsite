@@ -2,35 +2,35 @@
 
 "use client";
 
-import { useGSAP } from "@gsap/react";
-import gsap from "gsap";
+// import { useGSAP } from "@gsap/react";
+// import gsap from "gsap";
 import Speech from "./speech";
 
 const Home = () => {
-  useGSAP(() => {
-    const tl = gsap.timeline();
+  // useGSAP(() => {
+  //   const tl = gsap.timeline();
 
-    tl.from(".titleBox", {
-      y: -50,
-      opacity: 0,
-      duration: 0.6,
-      ease: "power2.out",
-    });
+  //   tl.from(".titleBox", {
+  //     y: -50,
+  //     opacity: 0,
+  //     duration: 0.6,
+  //     ease: "power2.out",
+  //   });
 
-    tl.from(".descriptionBox", {
-      y: -50,
-      opacity: 0,
-      duration: 0.6,
-      ease: "power2.out",
-    });
-    tl.from(".btnBox", {
-      y: -30,
-      opacity: 0,
-      scale: 0.8,
-      duration: 0.8,
-      ease: "back.out(1.7)",
-    });
-  });
+  //   tl.from(".descriptionBox", {
+  //     y: -50,
+  //     opacity: 0,
+  //     duration: 0.6,
+  //     ease: "power2.out",
+  //   });
+  //   tl.from(".btnBox", {
+  //     y: -30,
+  //     opacity: 0,
+  //     scale: 0.8,
+  //     duration: 0.8,
+  //     ease: "back.out(1.7)",
+  //   });
+  // });
 
   return (
     <div>

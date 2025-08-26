@@ -3,7 +3,6 @@
 "use client";
 import Image from "next/image";
 import DataCollector from "../../model/DB/storeData/dataCollector";
-import BgimgTwo from "../../public/assete/images/pagesbg/backgroundThree.png";
 import Logo from "../../public/assete/images/paunclogo.png";
 import Bar from "./bar";
 
@@ -13,11 +12,6 @@ const Member = () => {
       <div className="relative shadow-inner shadow-[#1A3129] w-[90%] m-auto mt-10 min-h-[50vh] rounded-t-xl px-5  md:px-20 py-5  bg-gray-100 flex justify-center ">
         <div className="absolute top-0 h-1/3 lg:h-1/2 w-[95%] md:w-[90%] m-auto bg-[radial-gradient(#cde4a4_2px,transparent_2px)] [background-size:20px_20px] opacity-40"></div>
 
-        <Image
-          src={BgimgTwo}
-          alt="bacground image "
-          className=" absolute right-10  top-0  hidden lg:block "
-        />
         <div className="flex flex-col w-full text-center items-center">
           <div className="jd:my-[50px] m-3 z-20">
             <Image width={300} src={Logo} alt="logo" />
