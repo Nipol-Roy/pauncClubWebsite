@@ -1,7 +1,7 @@
 /** @format */
 import Image from "next/image";
 import Link from "next/link";
-import notFoundImg from "../public/Gemini_Generated_Image_3fv8lw3fv8lw3fv8.png";
+import notFoundImg from "../public/unnamed.png";
 
 const NotFound = () => {
   return (
